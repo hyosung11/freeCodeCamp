@@ -358,3 +358,55 @@ class ResetPassword extends React.Component {
     );
   }
 };
+
+
+{/* 20. Review Using Props with Stateless Functional Components */}
+
+class CampSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Camper/>
+      </div>
+    );
+  }
+};
+// change code below this line
+
+// const Camper = (props) => {
+//   return <p>{props.name}</p>
+// };
+
+const Camper = props => <p>{props.name}</p>
+
+Camper.defaultProps = {
+  name: 'CamperBot'
+};
+
+Camper.propTypes = {
+   name: PropTypes.string.isRequired
+};
+
+
+{/* 21. Create a Stateful Component */}
+
+class StatefulComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    // initialize state here
+    this.state = {
+      name: 'Omi'
+    }
+
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>
+      </div>
+    );
+  }
+};

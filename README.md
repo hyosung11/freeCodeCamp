@@ -69,3 +69,20 @@ Code and Notes from freeCodeCamp
 - Access Props Using `this.props`
   - anytime you refer to a class component within itself, you use the `this` keyword.
   - e.g., if an ES6 class component has a prop called data: `{this.props.data}` in JSX.
+
+- Props and Components
+  - a **stateless functional component** is any function you write which accepts props and returns JSX.
+  - a **stateless component**, on the other hand, is a class that extends `React.Component`, but does not use internal state.
+  - a **stateful component** is a class component that does maintain its own internal state. (referred to as simply components or React components)
+  - to contain state management, minimize statefulness by creating stateless functional components wherever possible; this improves development and maintenance of your app by making it easier to follow how changes to state affect its behavior
+
+- Create a Stateful Component
+  - State consists of any data your app needs to know about that can change over time.
+  - create state in a React component by declaring a `state` property on the component class in its `constructor`
+    ```
+    this.state = {
+      // describe your state here
+    }
+    ```
+
+    
