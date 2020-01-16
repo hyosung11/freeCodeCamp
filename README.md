@@ -43,4 +43,5 @@ Code and Notes from freeCodeCamp
     - `super(props)`
 
 - Compose Multiple React Components
-  - Parent and children components structure 
+  - Parent and children components structure
+  - UI in terms of components

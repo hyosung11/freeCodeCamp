@@ -60,7 +60,7 @@ const JSX = (
 );
 
 
-{/* 6. Create a Stateless Functional Component */}
+{/* 7. Create a Stateless Functional Component */}
 
 const MyComponent = function() {
   return (
@@ -69,7 +69,7 @@ const MyComponent = function() {
 }
 
 
-{/* 7. Create React Component */}
+{/* 8. Create React Component */}
 
 class MyComponent extends React.Component {
   constructor(props) {
@@ -85,7 +85,7 @@ class MyComponent extends React.Component {
 };
 
 
-{/* 8. Create a Component with Composition */}
+{/* 9. Create a Component with Composition */}
 
 const ChildComponent = () => {
   return (
@@ -104,6 +104,46 @@ class ParentComponent extends React.Component {
       <div>
         <h1>I am the parent</h1>
         <ChildComponent />
+      </div>
+    );
+  }
+};
+
+
+{/* 10. Use React to Render Nested Components */}
+
+const TypesOfFruit = () => {
+  return (
+    <div>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
+    </div>
+  );
+};
+
+const Fruits = () => {
+  return (
+    <div>
+      <TypesOfFruit />
+    </div>
+  );
+};
+
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        <Fruits />
       </div>
     );
   }
