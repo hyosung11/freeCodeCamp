@@ -53,3 +53,19 @@ Code and Notes from freeCodeCamp
   - In React you can pass props, or properties, to child components.
   - Use **custom HTML attributes** created by you and supported by React to be passed to the component.
     `const Welcome = (props) => <h1>Hello, {props.user}!</h1>`
+  - to pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
+    `const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>`
+  - default props
+    - `MyComponent.defaultProps = { location: 'San Francisco' }`
+  - override default props by explicitly setting the prop values for a component.
+
+- PropTypes
+  - useful type-checking feature
+  - e.g., set `propTypes` on your component to require data to be of type `array`
+  - best practice to set `propTypes` when you know the type of prop ahead of time.
+  - `MyComponent.propTypes = { handleClick: PropTypes.func.isRequired }`
+  - Note: As of React v15.5.0, `PropTypes` is imported independently from React, like this: `import PropTypes from 'prop-types'`;
+
+- Access Props Using `this.props`
+  - anytime you refer to a class component within itself, you use the `this` keyword.
+  - e.g., if an ES6 class component has a prop called data: `{this.props.data}` in JSX.
