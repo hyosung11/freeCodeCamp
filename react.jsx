@@ -218,3 +218,56 @@ class MyComponent extends React.Component {
 };
 
 ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
+
+
+{/* 14. Pass Props to a Stateless Functional Component */}
+
+const CurrentDate = (props) => {
+  return (
+    <div>
+      <p>The current date is: {props.date}</p>
+    </div>
+  );
+};
+
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h3>What date is it?</h3>
+        <CurrentDate date={Date()}/>
+      </div>
+    );
+  }
+};
+
+
+{/* 15. Pass an Array as Props */}
+
+const List = (props) => {
+  { /* change code below this line */ }
+  return <p>{props.tasks.join(', ')}</p>
+  { /* change code above this line */ }
+};
+
+class ToDo extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>To Do Lists</h1>
+        <h2>Today</h2>
+        { /* change code below this line */ }
+        <List tasks={['code', 'network', 'manifest']}/>
+        <h2>Tomorrow</h2>
+        <List tasks={['meditate', 'strength train', 'manifest']}/>
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};

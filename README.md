@@ -48,3 +48,8 @@ Code and Notes from freeCodeCamp
 
 - Render a Class Component to the DOM
   - `ReactDOM.render(<ComponentToRender />, targetNode)`
+
+- Props
+  - In React you can pass props, or properties, to child components.
+  - Use **custom HTML attributes** created by you and supported by React to be passed to the component.
+    `const Welcome = (props) => <h1>Hello, {props.user}!</h1>`
