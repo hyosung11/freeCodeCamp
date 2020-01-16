@@ -85,4 +85,16 @@ Code and Notes from freeCodeCamp
     }
     ```
 
-    
+- Render State in the User Interface
+  - State is one of the most powerful features of components in React.
+  - It allows you to track important data in your app and render a UI in response to changes in this data.
+  - If your data changes, your UI will change.
+  - React uses what is called a virtual DOM, to keep track of changes behind the scenes.
+  - When state data updates, it triggers a re-render of the components using that data - including child components that received the data as a prop.
+  - Note that if you make a component stateful, no other components are aware of its state.
+  - Its state is completely encapsulated, or local to that component, unless you pass state data to a child component as props.
+  - This notion of encapsulated state is very important because it allows you to write certain logic, then have that logic contained and isolated in one place in your code.
+
+- Render State in the `render()` method before the `return`
+  - For example, you could declare functions, access data from state or props, perform computations on this data, and so on.
+  - Then, you can assign any data to variables, which you have access to in the `return` statement.
