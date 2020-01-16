@@ -45,3 +45,6 @@ Code and Notes from freeCodeCamp
 - Compose Multiple React Components
   - Parent and children components structure
   - UI in terms of components
+
+- Render a Class Component to the DOM
+  - `ReactDOM.render(<ComponentToRender />, targetNode)`
