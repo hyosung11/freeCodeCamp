@@ -31,4 +31,16 @@ Code and Notes from freeCodeCamp
   - any JSX element can be written with a self-closing tag and every element must be closed.
   - e.g., `<br />` never `<br>` as in plain HTML
   - A `<div>`, on the other hand, can be written as `<div />` or `<div></div>`.
-    - The difference is that in the first syntax version there is no way to include anything in the `<div />`. 
+    - The difference is that in the first syntax version there is no way to include anything in the `<div />`.
+
+- Components
+  - create using a JavaScript function which creates a *stateless functional component*
+    - a stateless component can receive and render data but doesn't manage or track changes to that data.
+  - React requires function names to begin with a capital letter.
+  - create using ES6 `class` syntax
+    - class components have access to React features such as local state and lifecycle hooks
+    - `constructor(props)` special method used during initialization of objects that are created with the `class` keyword.
+    - `super(props)`
+
+- Compose Multiple React Components
+  - Parent and children components structure 

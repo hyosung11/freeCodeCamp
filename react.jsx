@@ -58,3 +58,53 @@ const JSX = (
     <hr />
   </div>
 );
+
+
+{/* 6. Create a Stateless Functional Component */}
+
+const MyComponent = function() {
+  return (
+    <div>You shall not pass!</div>
+  )
+}
+
+
+{/* 7. Create React Component */}
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Hello React!</h1>
+      </div>
+    )
+  }
+};
+
+
+{/* 8. Create a Component with Composition */}
+
+const ChildComponent = () => {
+  return (
+    <div>
+      <p>I am the child</p>
+    </div>
+  );
+};
+
+class ParentComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>I am the parent</h1>
+        <ChildComponent />
+      </div>
+    );
+  }
+};
