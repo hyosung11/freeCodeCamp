@@ -98,3 +98,16 @@ Code and Notes from freeCodeCamp
 - Render State in the `render()` method before the `return`
   - For example, you could declare functions, access data from state or props, perform computations on this data, and so on.
   - Then, you can assign any data to variables, which you have access to in the `return` statement.
+
+- `this.setState`
+  - React provides a method for updating component `state` called `setState`.
+  - call the `setState` method within your component class like so: t`his.setState()`, passing in an object with key-value pairs.
+  - The keys are your state properties and the values are the updated state data.
+  - React expects you to never modify state directly, instead always use `this.setState()` when state changes occur.
+  - state updates through the `setState` method can be **asynchronous**.
+
+- Bind `this` to a Class Method
+  - A class method typically needs to use the `this` keyword so it can access properties on the class (such as `state` and `props`) inside the scope of the method.
+  - One common way is to explicitly bind `this` in the constructor so `this` becomes bound to the class methods when the component is initialized.
+    - e.g., `this.handleClick = this.handleClick.bind(this)`
+  - Then, when you call a function like `this.setState()` within your class method, this refers to the class and will not be `undefined`. 
