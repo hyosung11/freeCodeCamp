@@ -110,4 +110,15 @@ Code and Notes from freeCodeCamp
   - A class method typically needs to use the `this` keyword so it can access properties on the class (such as `state` and `props`) inside the scope of the method.
   - One common way is to explicitly bind `this` in the constructor so `this` becomes bound to the class methods when the component is initialized.
     - e.g., `this.handleClick = this.handleClick.bind(this)`
-  - Then, when you call a function like `this.setState()` within your class method, this refers to the class and will not be `undefined`. 
+  - Then, when you call a function like `this.setState()` within your class method, this refers to the class and will not be `undefined`.
+
+- Use State to Toggle an Element
+  - Sometimes you might need to know the previous state when updating the state.
+  - However, state updates may be asynchronous - this means React may batch multiple `setState()` calls into a single update.
+  - This means you can't rely on the previous value of `this.state` or `this.props` when calculating the next value.
+
+ ```
+this.setState((state, props) => ({
+  counter: state.counter + props.increment
+}));
+```
