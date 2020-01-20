@@ -1,4 +1,4 @@
-# freeCodeCamp
+# [freeCodeCamp](https://www.freecodecamp.org/)
 Code and Notes from freeCodeCamp
 
 ## [React](https://reactjs.org/) Challenges
@@ -9,9 +9,9 @@ Code and Notes from freeCodeCamp
   - utilize event listeners and
   - certain life cycle methods to update data as it changes
 
-- JSX is a syntax extension of JS that allows you to write HTML directly with JS.
+### JSX is a syntax extension of JS that allows you to write HTML directly with JS.
   - `{ 'this is treated as JavaScript code' }`
-  - Babel: a popular tool to compile JSX code into JavaScript
+  - **Babel**: a popular tool to compile JSX code into JavaScript
   - nested JSX must return a **single** element
 
 - Comments in JSX
@@ -33,7 +33,7 @@ Code and Notes from freeCodeCamp
   - A `<div>`, on the other hand, can be written as `<div />` or `<div></div>`.
     - The difference is that in the first syntax version there is no way to include anything in the `<div />`.
 
-- Components
+### Components
   - create using a JavaScript function which creates a *stateless functional component*
     - a stateless component can receive and render data but doesn't manage or track changes to that data.
   - React requires function names to begin with a capital letter.
@@ -49,12 +49,12 @@ Code and Notes from freeCodeCamp
 - Render a Class Component to the DOM
   - `ReactDOM.render(<ComponentToRender />, targetNode)`
 
-- Props
+### Props
   - In React you can pass props, or properties, to child components.
   - Use **custom HTML attributes** created by you and supported by React to be passed to the component.
-    `const Welcome = (props) => <h1>Hello, {props.user}!</h1>`
+    - `const Welcome = (props) => <h1>Hello, {props.user}!</h1>`
   - to pass an array to a JSX element, it must be treated as JavaScript and wrapped in curly braces.
-    `const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>`
+    - `const ChildComponent = (props) => <p>{props.colors.join(', ')}</p>`
   - default props
     - `MyComponent.defaultProps = { location: 'San Francisco' }`
   - override default props by explicitly setting the prop values for a component.
@@ -70,7 +70,7 @@ Code and Notes from freeCodeCamp
   - anytime you refer to a class component within itself, you use the `this` keyword.
   - e.g., if an ES6 class component has a prop called data: `{this.props.data}` in JSX.
 
-- Props and Components
+### Props and Components
   - a **stateless functional component** is any function you write which accepts props and returns JSX.
   - a **stateless component**, on the other hand, is a class that extends `React.Component`, but does not use internal state.
   - a **stateful component** is a class component that does maintain its own internal state. (referred to as simply components or React components)
@@ -85,7 +85,7 @@ Code and Notes from freeCodeCamp
     }
     ```
 
-- Render State in the User Interface
+### Render State in the User Interface
   - State is one of the most powerful features of components in React.
   - It allows you to track important data in your app and render a UI in response to changes in this data.
   - If your data changes, your UI will change.
@@ -95,7 +95,7 @@ Code and Notes from freeCodeCamp
   - Its state is completely encapsulated, or local to that component, unless you pass state data to a child component as props.
   - This notion of encapsulated state is very important because it allows you to write certain logic, then have that logic contained and isolated in one place in your code.
 
-- Render State in the `render()` method before the `return`
+### Render State in the `render()` method before the `return`
   - For example, you could declare functions, access data from state or props, perform computations on this data, and so on.
   - Then, you can assign any data to variables, which you have access to in the `return` statement.
 
@@ -122,7 +122,8 @@ this.setState((state, props) => ({
   counter: state.counter + props.increment
 }));
 ```
-- Create a Controlled Input
+
+### Create a Controlled Input
   - Your application may have more complex interactions between state and the rendered UI.
   - For example, form control elements for text input, such as `input` and `textarea`, maintain their own state in the DOM as the user types.
   - With React, you can move this mutable state into a React component's `state`.
