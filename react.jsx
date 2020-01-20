@@ -767,3 +767,46 @@ class RenderInput extends React.Component {
     );
   }
 };
+
+
+{/* 32. Use the Lifecycle Method componentWillMount */}
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  componentWillMount() {
+    // change code below this line
+    console.log('I am ready for my potato pancakes');
+    // change code above this line
+  }
+  render() {
+    return <div />
+  }
+};
+
+
+{/* 33. Use the Lifecycle Method componentDidMount */}
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeUsers: null
+    };
+  }
+  componentDidMount() {
+    setTimeout( () => {
+      this.setState({
+        activeUsers: 1273
+      });
+    }, 2500);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Active Users: {this.state.activeUsers}</h1>
+      </div>
+    );
+  }
+};
