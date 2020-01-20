@@ -99,20 +99,20 @@ Code and Notes from freeCodeCamp
   - For example, you could declare functions, access data from state or props, perform computations on this data, and so on.
   - Then, you can assign any data to variables, which you have access to in the `return` statement.
 
-- `this.setState`
+### `this.setState`
   - React provides a method for updating component `state` called `setState`.
   - call the `setState` method within your component class like so: t`his.setState()`, passing in an object with key-value pairs.
   - The keys are your state properties and the values are the updated state data.
   - React expects you to never modify state directly, instead always use `this.setState()` when state changes occur.
   - state updates through the `setState` method can be **asynchronous**.
 
-- Bind `this` to a Class Method
+### Bind `this` to a Class Method
   - A class method typically needs to use the `this` keyword so it can access properties on the class (such as `state` and `props`) inside the scope of the method.
   - One common way is to explicitly bind `this` in the constructor so `this` becomes bound to the class methods when the component is initialized.
     - e.g., `this.handleClick = this.handleClick.bind(this)`
   - Then, when you call a function like `this.setState()` within your class method, this refers to the class and will not be `undefined`.
 
-- Use State to Toggle an Element
+### Use State to Toggle an Element
   - Sometimes you might need to know the previous state when updating the state.
   - However, state updates may be asynchronous - this means React may batch multiple `setState()` calls into a single update.
   - This means you can't rely on the previous value of `this.state` or `this.props` when calculating the next value.
@@ -129,3 +129,20 @@ this.setState((state, props) => ({
   - With React, you can move this mutable state into a React component's `state`.
   - The user's input becomes part of the application `state`, so React controls the value of that input field.
   - Typically, if you have React components with input fields the user can type into, it will be a controlled input form.
+
+### Pass State as Props to Child Components
+- A common pattern is to have a stateful component containing the `state` important to your app, that then renders child components. You want these components to have access to some pieces of that `state`, which are passed in as `props`.
+- This pattern illustrates some important paradigms in React.
+- The first is *unidirectional data flow*. State flows in one direction down the tree of your application's components, from the stateful parent component to child components.
+- The child components only receive the state data they need.
+- The second is that complex stateful apps can be broken down into just a few, or maybe a single, stateful component.
+- The rest of your components simply receive state from the parent as props, and render a UI from that state.
+- It begins to create a separation where state management is handled in one part of code and UI rendering in another.
+- This principle of separating state logic from UI logic is one of React's key principles.
+- When it's used correctly, it makes the design of complex, stateful applications much easier to manage.
+
+### Pass a Callback as Props
+- You can pass `state` as props to child components, but you're not limited to passing data.
+- You can also pass handler functions or any method that's defined on a React component to a child component.
+- This is how you allow child components to interact with their parent components.
+- You pass methods to a child just like a regular prop. It's assigned a name and you have access to that method name under `this.props` in the child component.
