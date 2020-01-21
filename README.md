@@ -182,3 +182,5 @@ this.setState((state, props) => ({
 - use `shouldComponentUpdate()` to prevent this by comparing the props.
 - The method must return a boolean value that tells React whether or not to update the component.
 - You can compare the current props (`this.props`) to the next props (`nextProps`) to determine if you need to update or not, and return `true` or `false` accordingly.
+
+### test script
