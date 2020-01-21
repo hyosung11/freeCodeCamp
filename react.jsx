@@ -867,7 +867,7 @@ class OnlyEvens extends React.Component {
      // change code below this line
      if (nextProps.value % 2 === 0) {
          return true;
-     }  
+     }
      // change code above this line
   }
   componentDidUpdate() {
@@ -897,6 +897,18 @@ class Controller extends React.Component {
         <button onClick={this.addValue}>Add</button>
         <OnlyEvens value={this.state.value}/>
       </div>
+    );
+  }
+};
+
+
+{/* 36. Introducing Inline Styles */}
+
+class Colorful extends React.Component {
+  render() {
+    return (
+      {/* add a style attribute to the div to give the text a color of red and font size of 72px; the px units are optional (but I would use them)*/}
+      <div style={{color: "red", fontSize: "72px"}}>Big Red</div>
     );
   }
 };
