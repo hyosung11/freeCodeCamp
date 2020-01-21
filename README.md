@@ -188,3 +188,14 @@ this.setState((state, props) => ({
 - Another option is to apply inline styles, which are very common in ReactJS development.
 - JSX elements use the style attribute set equal to a JavaScript object:
   - `<div style={{color: "yellow", fontSize: 16}}>Mellow Yellow</div>`
+
+### Add Inline Styles in React
+- the names of certain CSS style properties use camel case.
+- All property value length units (like height, width, and fontSize) are assumed to be in px unless otherwise specified.
+- If you want to use em, for example, you wrap the value and the units in quotes, like `{fontSize: "4em"}`.
+- Other than the length values that default to px, all other property values should be wrapped in quotes.
+
+### Use Advanced JavaScript in React Render Method
+- write JavaScript directly in your render methods, before the return statement, without inserting it inside of curly braces.
+- This is because it is not yet within the JSX code.
+- When you want to use a variable later in the JSX code inside the return statement, you place the variable name inside curly braces.
