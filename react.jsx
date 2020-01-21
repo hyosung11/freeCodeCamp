@@ -907,7 +907,7 @@ class Controller extends React.Component {
 class Colorful extends React.Component {
   render() {
     return (
-      {/* add a style attribute to the div to give the text a color of red and font size of 72px; the px units are optional (but I would use them)*/}
+      {/* add a style attribute to the div to give the text a color of red and font size of 72px; the px units are optional (but I would use them; then in quotes)*/}
       <div style={{color: "red", fontSize: "72px"}}>Big Red</div>
     );
   }

@@ -183,4 +183,8 @@ this.setState((state, props) => ({
 - The method must return a boolean value that tells React whether or not to update the component.
 - You can compare the current props (`this.props`) to the next props (`nextProps`) to determine if you need to update or not, and return `true` or `false` accordingly.
 
-### test script
+### Introducing Inline Styles
+- To style in React apply a class to your JSX element using the `className` attribute, and apply styles to the class in your stylesheet.
+- Another option is to apply inline styles, which are very common in ReactJS development.
+- JSX elements use the style attribute set equal to a JavaScript object:
+  - `<div style={{color: "yellow", fontSize: 16}}>Mellow Yellow</div>`
