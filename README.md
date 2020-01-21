@@ -199,3 +199,29 @@ this.setState((state, props) => ({
 - write JavaScript directly in your render methods, before the return statement, without inserting it inside of curly braces.
 - This is because it is not yet within the JSX code.
 - When you want to use a variable later in the JSX code inside the return statement, you place the variable name inside curly braces.
+
+
+### Render with an If-Else Condition
+- Another application of using JavaScript to control your rendered view is to tie the elements that are rendered to a condition.
+- When the condition is true, one view renders. When it's false, it's a different view.
+- You can do this with a standard if/else statement in the render() method of a React component.
+
+### Use && for a More Concise Conditional
+- use the && logical operator to perform conditional logic in a concise way.
+  - `{condition && <p>markup</p>}`
+- include these statements directly in your JSX and string multiple conditions together by writing && after each one.
+- This allows you to handle more complex conditional logic in your render() method without repeating a lot of code.
+
+### Use a Ternary Expression for Conditional Rendering
+- `if/else` statements can't be inserted directly into JSX code.
+- Ternary expressions can be an excellent alternative if you want to implement conditional logic within your JSX.
+- `condition ? expressionIfTrue : expressionIfFalse`
+
+### Render Conditionally from Props
+-  Using props to conditionally render code is very common with React developers — that is, they use the value of a given prop to automatically make decisions about what to render.
+
+### Change Inline CSS Conditionally Based on Component State
+- render CSS conditionally based on the state of a React component.
+- check for a condition, and if that condition is met, modify the styles object that's assigned to the JSX elements in the render method.
+- When you set a style object based on a condition, you describe how the UI should look as a function of the application's state.
+- There is a clear flow of information that only moves in one direction. This is the preferred method when writing applications with React.
