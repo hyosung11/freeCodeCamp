@@ -225,3 +225,8 @@ this.setState((state, props) => ({
 - check for a condition, and if that condition is met, modify the styles object that's assigned to the JSX elements in the render method.
 - When you set a style object based on a condition, you describe how the UI should look as a function of the application's state.
 - There is a clear flow of information that only moves in one direction. This is the preferred method when writing applications with React.
+
+### Use Array.map() to Dynamically Render Elements
+- Conditional rendering is useful, but you may need your components to render an unknown number of elements.
+Often in reactive programming, a programmer has no way to know what the state of an application is until runtime, because so much depends on a user's interaction with that program.
+- Programmers need to write their code to correctly handle that unknown state ahead of time. Using `Array.map()` in React illustrates this concept.
