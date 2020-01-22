@@ -230,3 +230,9 @@ this.setState((state, props) => ({
 - Conditional rendering is useful, but you may need your components to render an unknown number of elements.
 Often in reactive programming, a programmer has no way to know what the state of an application is until runtime, because so much depends on a user's interaction with that program.
 - Programmers need to write their code to correctly handle that unknown state ahead of time. Using `Array.map()` in React illustrates this concept.
+
+### Give Sibling Elements a Unique Key Attribute
+- When you create an array of elements, each one needs a key attribute set to a unique value.
+- React uses these keys to keep track of which items are added, changed, or removed.
+- This helps make the re-rendering process more efficient when the list is modified in any way.
+- Note: Keys only need to be unique between sibling elements, they don't need to be globally unique in your application.
