@@ -37,3 +37,18 @@ const action = {
 function actionCreator() {
   return action;
 }
+
+
+// 5. Dispatch an Action Event
+
+const store = Redux.createStore(
+  (state = {login: false})
+);
+
+const loginAction = () => {
+  return {
+    type: 'LOGIN'
+  }
+};
+
+// Dispatch action here:

@@ -18,3 +18,12 @@ Think of Redux actions as messengers that deliver information about events happe
 
 ### Define an Action Creator
 After creating an action, the next step is sending the action to the Redux store so it can update its state. In Redux, you define action creators to accomplish this. An action creator is simply a JavaScript function that returns an action. In other words, action creators create objects that represent action events.
+
+### Dispatch an Action Event
+`dispatch` method is what you use to dispatch actions to the Redux store. Calling `store.dispatch()` and passing the value returned from an action creator sends an action back to the store.
+
+Recall that action creators return an object with a type property that specifies the action that has occurred. Then the method dispatches an action object to the Redux store. Based on the previous challenge's example, the following lines are equivalent, and both dispatch the action of type LOGIN:
+```
+store.dispatch(actionCreator());
+store.dispatch({ type: 'LOGIN' });
+```
