@@ -46,3 +46,7 @@ Another key principle in Redux is that `state` is read-only. In other words, the
 - assign action types as read-only constants, then reference these constants wherever they are used.
 - refactor the code you're working with to write the action types as `const` declarations.
 - It's generally a convention to write constants in all UPPERCASE, and this is standard practice in Redux as well
+
+### Register a Store Listener
+- Another method you have access to on the Redux store object is `store.subscribe()`. - This allows you to subscribe listener functions to the store, which are called whenever an action is dispatched against the store.
+- One simple use for this method is to subscribe a function to your store that simply logs a message every time an action is received and the store is updated.
