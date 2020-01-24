@@ -34,4 +34,15 @@ After an action is created and dispatched, the Redux store needs to know how to 
 Another key principle in Redux is that `state` is read-only. In other words, the `reducer` function must **always** return a new copy of `state` and never modify state directly. Redux does not enforce state immutability, however, you are responsible for enforcing it in the code of your reducer functions.
 
 ### Use a Switch Statement to Handle Multiple Accounts
-You can tell the Redux store how to handle multiple action types. Say you are managing user authentication in your Redux store. You want to have a state representation for when users are logged in and when they are logged out. You represent this with a single state object with the property authenticated. You also need action creators that create actions corresponding to user login and user logout, along with the action objects themselves.
+- You can tell the Redux store how to handle multiple action types.
+- Say you are managing user authentication in your Redux store.
+  - You want to have a state representation for when users are logged in and
+  - when they are logged out.
+  - You represent this with a single state object with the property `authenticated`.
+- You also need action creators that create actions corresponding to user login and user logout, along with the action objects themselves.
+
+
+### Use `const` for Action Types
+- assign action types as read-only constants, then reference these constants wherever they are used.
+- refactor the code you're working with to write the action types as `const` declarations.
+- It's generally a convention to write constants in all UPPERCASE, and this is standard practice in Redux as well
